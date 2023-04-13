@@ -1,0 +1,25 @@
+// 鼠标经过上移阴影动画
+.hoverShafow(){
+    transition: all 0.5s;
+    //悬停时上移3px，阴影变浓
+    &:hover{
+        transform: translate3d(0,-3px,0);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+}
+
+.size{
+    width: 100px;
+    height: 100px;
+}
+
+.size2(@w)
+{
+    width:@w;
+    height:@w;
+}
+.box{
+    .size2(200px);
+    background-color: red;
+    .hoverShafow();
+}
